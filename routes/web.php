@@ -18,3 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/redirect','SocialController@redirect')->name('google');
+Route::get('/callback','SocialController@callback');
+
+
+Route::resource('sitio', 'SitioController');
+
+
+
+
+
